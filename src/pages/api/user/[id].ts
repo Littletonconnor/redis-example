@@ -51,7 +51,10 @@ export default async function handler(
     return;
   }
 
-  await redis.set(id.toString(), user);
+  const MAX_AGE = 60_000 * 60; // 1 hour
+  const EXPIRY_MS = `PX`; // milliseconds
+
+  await redis.set(id.toString(), user, EXPIRY_MS, MAX_AGE);
 
   res.end(
     `Key was retrieved from Database: ${user}\nRedis keys currently stored: ${await redis.keys(

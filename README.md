@@ -1,36 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Redis Demo
 
-## Getting Started
+This is a demo of how to use Redis with Node.js. If you would like a deeper dive into how Redis works and why you would want to use it. See my [blog post](https://www.connorlittleton.dev/blog/redis) on the topic.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A lot of demos out there these days will show you how to use Redis using [Upstash](https://upstash.com/) or Redis Labs. While these are great services, they aren't super practical for a lot of use cases. This purpose of this demo is to get you up and running with Redis on your local machine. In a work setting, there would need to be a lot more work to get this on a remote server, but this demo will get you started with the basics.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+In order to run this demo, you need to have Redis installed and running on your machine. You can download Redis via brew with `brew install redis` or by following the instructions on the [Redis website](https://redis.io/download).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Once you have Redis installed, you can run it with `redis-server`. You should see a bunch of text pop up in your terminal. This is the Redis server running. You can stop the server with `ctrl + c`.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Once you have Redis running, you can run the demo with `npm run dev`. This will run start up our Next.js application. You can view the application at `localhost:3000`.
